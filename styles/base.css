@@ -1,0 +1,25 @@
+body{
+  line-height: 1.5;
+  color: #000000;
+  margin: 0;
+  width: 100%
+}
+a, a:link, a:active{
+  text-decoration: none;
+  color: #ffffff;
+}
+a:hover, a:focus{
+  color:#CC0000;
+}
+a:visited{
+  color:#ffffff;
+}
+ul{
+  list-style-type: none;
+}
+img{
+  width: 100%;
+  padding: 0;
+  max-height: 640px;
+  max-width: 640px;
+}
