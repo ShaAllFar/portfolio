@@ -2,8 +2,12 @@
 <html>
 <head>
   <title>Shawn Farrow</title>
+  <link href="vendor/reset.css" type="text/css" rel="stylesheet">
   <link href="styles/base.css" type="text/css" rel="stylesheet">
+  <link href="styles/layout.css" type="text/css" rel="stylesheet">
   <link href="styles/modules.css" type="text/css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -15,33 +19,24 @@
         <li><a href="#">Play</a></li>
       </ul>
     </nav>
-      <section class="header-group">
-        <q>Hello, my name is Shawn Farrow and I like making websites look cool</q>
-      </section>
   </header>
   <main>
-    <section id="article-section" class="article-section">
-      <img src="images/me.jpg" alt="me.jpg">
-      <article class="article">
+    <section class="home-section">
+      <!--home section -->
+      <div>
+        <h1>Shawn Farrow</h1>
+        <h3>Web Developer</h3>
+      </div>
+      <img src="images/me-background.png">
+    </section>
+    <section id="article" class="article-section">
+      <article class="template">
         <header>
-          <h1>Title of Project</h1>
-          <p>This would be a small discription of the project</p>
-        </header>
-        <section class="article-body">
-          <p>This will be more in dept about the project. </p>
-        </section>
-        <hr>
+          <section class="article-image"></section>
+          <h2></h2>
+          <time pubdate datetime="2000-01-01"></time>
+        <section class="article-body"></section>
       </article>
-      <article class="article">
-        <header>
-          <h1>Title of Project</h1>
-          <p>This would be a small discription of the project</p>
-        </header>
-        <section class="article-body">
-          <p>This will be more in dept about the project. </p>
-        </section>
-        <hr>
-      <article>
     </section>
   </main>
   <footer class="site-footer">
@@ -52,5 +47,9 @@
       <li><a href="#">Twt</a></li>
     </ul>
   </footer>
+  <script src="scripts/interestsArticles.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="scripts/interests.js"></script>
+
 </body>
 </html>
