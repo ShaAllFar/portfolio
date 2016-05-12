@@ -3,6 +3,7 @@ var interests = [];
 function Interest(item){
   this.title = item.title;
   this.publishedOn = item.publishedOn;
+  this.category = item.category;
   this.srcImage = item.srcImage;
   this.body = item.body;
 }
@@ -31,5 +32,5 @@ myInterestsData.forEach(function(ele){
 });
 
 interests.forEach(function(ele){
-  $('#article').append(ele.toHtml());
+  $('#interests').append(ele.toHtml());
 });

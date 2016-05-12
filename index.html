@@ -14,9 +14,8 @@
   <header class="site-header">
     <nav class="main-nav">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Play</a></li>
+        <li class="tab" data-content="interests"><a href="#interests">Home</a></li>
+        <li class="tab" data-content="about"><a href="#about">About</a></li>
       </ul>
     </nav>
   </header>
@@ -30,14 +29,32 @@
       </div>
       <img class="foreground-image"src="images/me-background.png">
     </section>
-    <section id="article" class="article-section">
+    <section id="interests" class="tab-content">
+      <select id="category-filter">
+        <option value="">--Filter By Category--</option>
+      </select>
       <article class="template">
         <header>
           <section class="article-image"></section>
           <h2></h2>
           <time pubdate datetime="2000-01-01"></time>
         <section class="article-body"></section>
+        <p class="read-on">Read More...</p>
       </article>
+    </section>
+    <section id="about" class="tab-content">
+      <header>
+        <h2>Thank you for taking the time to visit my site</h2>
+      </header>
+      <section>
+        <p>Bio</p>
+        <ul>
+          <li><a href="#">Github</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">twitter</a></li>
+          <li><a href="#">facebook</a></li>
+        </ul>
+      </section>
     </section>
   </main>
   <footer class="site-footer">
@@ -48,9 +65,11 @@
       <li><a href="#">Twt</a></li>
     </ul>
   </footer>
-  <script src="scripts/interestsArticles.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="scripts/interestsArticles.js"></script>
   <script src="scripts/interests.js"></script>
+  <script src="scripts/interestsView.js"></script>
+
 
 </body>
 </html>
