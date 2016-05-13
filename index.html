@@ -9,6 +9,16 @@
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script id="article-template" type="text/x-handlebars-template">
+    <article class="template" data-content="interests">
+      <header>
+        <section class="article-image">{{{srcImage}}}</section>
+        <h2>{{title}}</h2>
+        <p>Published:<time pubdate datetime="2000-01-01">{{daysAgo}}</time>days ago</p>
+      <section class="article-body">{{{body}}}</section>
+      <a class="read-on">Read On &rarr;</a>
+    </article>
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -39,7 +49,7 @@
           <h2></h2>
           <time pubdate datetime="2000-01-01"></time>
         <section class="article-body"></section>
-        <p class="read-on">Read More...</p>
+        <a class="read-on">Read On &rarr;</a>
       </article>
     </section>
     <section id="about" class="tab-content">
@@ -66,6 +76,7 @@
     </ul>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   <script src="scripts/interestsArticles.js"></script>
   <script src="scripts/interests.js"></script>
   <script src="scripts/interestsView.js"></script>
