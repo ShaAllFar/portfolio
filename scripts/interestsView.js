@@ -12,31 +12,33 @@ interestsView.handleMainNav = function(){
 interestsView.setTeaser = function(){
   $('.article-body p:nth-child(2)').hide();
 
-  $('#interests').on('click','.read-on',function(){
-    $(this).parent().find('p').show();
+  $('#interests').on('click','.read-on',function(e){
+    e.preventDefault();
+    $(this).parent().find('p').fadeIn();
     $(this).attr('class','read-less');
-    $(this).text('Read Less...');
+    $(this).html('Read Less &larr;');
   });
 
-  $('#interests').on('click','.read-less', function(){
+  $('#interests').on('click','.read-less', function(e){
+    e.preventDefault();
     $(this).parent().find('p:nth-child(2)').hide();
     $(this).attr('class','read-on');
-    $(this).text('Read More...');
+    $(this).html('Read More &rarr;');
 
   });
 };
-interestsView.populateFilter = function(){
-  $().each(function(){
-    if (!$(this).hasClass('template')) {
-      var value = 
-      console.log(value);
-      var optionTag = '<option value="' + value + '">' + value + '</option>';
-      if('#category-filter option[value="'+ value+'"]'){
-        $('#category-filter').append(optionTag);
-      }
-    }
-  });
-};
+// interestsView.populateFilter = function(){
+//   .each(function(){
+//     if (!$(this).hasClass('template')) {
+//       var value =
+//       console.log(value);
+//       var optionTag = '<option value="' + value + '">' + value + '</option>';
+//       if('#category-filter option[value="'+ value+'"]'){
+//         $('#category-filter').append(optionTag);
+//       }
+//     }
+//   });
+// };
 
 
 
