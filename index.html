@@ -10,21 +10,24 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script id="article-template" type="text/x-handlebars-template">
-    <article class="template" data-content="interests">
+    <article class="template" data-content="interests" data-category="{{category}}">
       <header>
-        <section class="article-image">{{{srcImage}}}</section>
+          <section class="article-image">{{{srcImage}}}</section
         <h2>{{title}}</h2>
-        <p>Published:<time pubdate datetime="2000-01-01">{{daysAgo}}</time>days ago</p>
+        <p>Published: <time pubdate datetime="2000-01-01">{{daysAgo}}</time> days ago</p>
       <section class="article-body">{{{body}}}</section>
       <a class="read-on">Read On &rarr;</a>
     </article>
+  </script>
+  <script id="category-filter-template" type="text/x-handlebars-template">
+    <option value="{{category}}">{{category}}</option>
   </script>
 </head>
 <body>
   <header class="site-header">
     <nav class="main-nav">
       <ul>
-        <li class="tab" data-content="interests"><a href="#interests">Home</a></li>
+        <li class="tab" data-content="interests"><a href="#article">Home</a></li>
         <li class="tab" data-content="about"><a href="#about">About</a></li>
       </ul>
     </nav>
@@ -40,16 +43,16 @@
       <img class="foreground-image"src="images/me-background.png">
     </section>
     <section id="interests" class="tab-content">
-      <select id="category-filter">
+      <select id="category-filter" class="filter">
         <option value="">--Filter By Category--</option>
       </select>
-      <article class="template">
+      <article id="articles"class="template">
         <header>
           <section class="article-image"></section>
           <h2></h2>
           <time pubdate datetime="2000-01-01"></time>
         <section class="article-body"></section>
-        <a class="read-on">Read On &rarr;</a>
+        <a class="read-on"></a>
       </article>
     </section>
     <section id="about" class="tab-content">
