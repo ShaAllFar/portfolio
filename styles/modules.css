@@ -4,7 +4,11 @@
 }
 .main-nav{
   background-color: #000000;
+  height:40px;
   padding: 2%;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
 
 }
 .main-nav ul{
@@ -16,6 +20,21 @@
 .main-nav ul li{
   display: inline;
   padding:.5em 1.25em;
+  line-height: 2;
+}
+.header-logo{
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  background: #000000;
+  float: left;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.5;
+  border: 2px solid #ffffff;
 }
 .home-section{
   width: 100%;
@@ -27,7 +46,6 @@
 }
 .home-section div{
   width: 90%;
-  border: .3em solid  rgba(255,0,0,0.4);
   position: absolute;
   top: 5%;
   left: 5%;
@@ -40,7 +58,7 @@
   font-weight: bold;
   opacity: 1;
   padding: 2% 7% 0 0;
-  color: white;
+  color: #000000;
 }
 .home-section h3{
   text-align: right;
@@ -61,14 +79,29 @@
   margin: 0;
 }
 .filter{
-  width: 80%;
-  margin: 5% 0 5% 10%;
-  height: 25px;
+  width: 90%;
+  margin: 5% 0 0 5%;
+  height: 40px;
+  padding: 2%;
+  border: 1px solid #a6a6a6;
+  font-size: 1em;
+  outline: none;
+}
+.article{
+  width: 90%;
+  margin-left: 10%;
 }
 
-.article{
-  width: 80%;
-  margin: 0 auto;
+.article-text{
+  margin-left: 5%;
+  padding: 0px;
+}
+.pub{
+  font-size: .7em;
+}
+.read{
+  color:#000000;
+  font-weight: bold;
 }
 
 .site-footer{
@@ -91,6 +124,13 @@
     font-size: 1.5em;
     line-height: .2;
   }
+  .filter{
+    width: 60%;
+    margin: 5% 0 5% 20%;
+    height: 50px;
+    font-size: 1.5em;
+  }
+
 }
 
 @media only screen and (min-width: 700px){
