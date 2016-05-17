@@ -1,12 +1,12 @@
 var interestsView = {};
-interestsView.generateArticles = function(){
-  interests.forEach(function(a){
-    $('#interests').append(a.toHtml('#article-template'));
-    if($('#category-filter option:contains("' + a.category + '")').length === 0){
-      $('#category-filter').append(a.toHtml('#category-filter-template'));
-    }
-  });
-};
+// interestsView.generateArticles = function(){
+//   interests.forEach(function(a){
+//     $('#interests').append(a.toHtml('#article-template'));
+//     if($('#category-filter option:contains("' + a.category + '")').length === 0){
+//       $('#category-filter').append(a.toHtml('#category-filter-template'));
+//     }
+//   });
+// };
 
 interestsView.handleMainNav = function(){
   $('.main-nav').on('click','li',function(){
@@ -50,12 +50,15 @@ interestsView.handleFilter = function(){
   });
 };
 
+interestsView.initIndexPage = function(){
+  Interest.all.forEach(function(a){
+    if($('#category-filter option:contains("' + a.category + '")').length === 0){
+      $('#category-filter').append(a.toHtml('#category-filter-template'));
+    }
+    $('#interests').append(a.toHtml('#article-template'));
 
-
-
-$(document).ready(function(){
-  interestsView.generateArticles();
+  });
   interestsView.handleMainNav();
   interestsView.setTeaser();
   interestsView.handleFilter();
-});
+};
