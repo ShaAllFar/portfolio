@@ -1,12 +1,13 @@
 body{
   line-height: 1.5;
-  color: #ffffff;
+  color: #000000;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
-  background-color: #000000;
+  font-size: 1rem;
+  background-color: #ffffff;
 }
 a, a:link, a:active{
+  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   color: #ffffff;
 }
@@ -20,13 +21,13 @@ ul{
   list-style-type: none;
 }
 img{
-  width: 80%;
-  margin: 2% 10%;
+  width: 90%;
+  margin: 2% 5%;
 }
 
 h1,h2{
   font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 800;
   padding: 1%  2%;
 }
