@@ -8,8 +8,11 @@
       var $clicked = $(this).data('content');
       $('.tab-content').hide();
       $('#' + $clicked).fadeIn();
+      $('#nav-menu').toggleClass('nav-menu-tgl');
     });
     $('.main-nav .tab:first').click();
+    $('#nav-menu').toggleClass('nav-menu-tgl');
+    
   };
 
   interestsView.setTeaser = function(){
