@@ -3,7 +3,9 @@
 }
 .template{
   padding: 3% 0;
-  border: 10px solid black;
+  background-color: #ffffff;
+  width: 90%;
+  margin: 5% 5%;
 }
 .site-header{
   width: 100%;
