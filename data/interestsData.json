@@ -1,6 +1,6 @@
 [
   {
-    "srcImage":"<img src=\"images/me.jpg\">",
+    "srcImage":"<img src=\"images/hats.jpg\">",
     "title":"Hats",
     "category":"Interests",
     "publishedOn":"2016-05-09",
@@ -21,7 +21,7 @@
     "body":"<p class=\"article-text\">I enjoy watching sports of all kinds</p><p class=\"article-text\">I enjoy watching sports of all kinds</p>"
   },
   {
-    "srcImage":"<img src=\"images/forest.jpg\">",
+    "srcImage":"<img src=\"images/shoes.jpg\">",
     "title":"Shoes",
     "category":"Interests",
     "publishedOn":"2016-04-10",
