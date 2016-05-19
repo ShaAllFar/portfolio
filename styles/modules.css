@@ -18,7 +18,7 @@
 
 }
 .main-nav{
-  background-color: red;
+  background-color: #8D8F8E;
   height:50px;
   position: fixed;
   z-index: 99999;
@@ -32,6 +32,9 @@
   border-top: 2px solid #666666;
   border-bottom: 2px solid #404040;
 }
+span{
+  padding:0 10px 0  5px;
+}
 .icon-menu{
   color: #ffffff;
   float: right;
@@ -39,19 +42,16 @@
   padding: 0;
   margin: 5px 10px 0 0;
 }
-span{
-  padding:0 10px 0  5px;
-}
 .nav-menu{
   background-color: #4d4d4d;
   width: 0;
   height: auto;
   overflow: hidden;
   float: right;
-  transition: 1s;
+  transition: .5s;
 }
 .nav-menu-tgl{
-  width: 40%;
+  width: 50%;
   overflow: hidden;
 
 }
@@ -73,16 +73,15 @@ span{
   text-align: center;
 }
 .home-div h3{
-  color: #ffffff;
+  color: #8D8F8E;
   text-align: center;
   padding: 2%;
-  
 }
 .filter{
   width: 90%;
   margin: 5% 0 0 5%;
   height: 40px;
-  padding: 2%;
+  padding: 1%;
   border: 1px solid #a6a6a6;
   font-size: 1em;
   outline: none;
@@ -94,11 +93,13 @@ span{
 }
 
 .article-text{
-  margin-left: 5%;
-  padding: 0px;
+  margin: 0 5%;
+  padding: 0;
+  /*text-indent: 35px;*/
 }
 .pub{
   font-size: .7em;
+  padding-top: 1%;
 }
 .read{
   color:#000000;
@@ -112,17 +113,76 @@ span{
 .site-footer a{
   padding: 10px;
 }
+.template{
+  min-height: 400px;
+}
+.template h2{
+  border-bottom: 1px solid #8D8F8E;
+}
+.template
+
 
 
 @media only screen and (min-width: 500px){
-
-
+  .filter{
+  height: 50px;
+  width: 60%;
+  margin-left: 20%;
+  }
+  .template h2{
+  font-size: 2em;
+  }
+  .nav-menu-tgl{
+    width: 40%;
+  }
 }
 
 @media only screen and (min-width: 700px){
+  .spacer{
+    height: 60px;
+  }
+  .header-logo{
+    width: 40px;
+    height: 40px;
+    font-size: 1.7em;
+    border: 3px solid #ffffff;
+    margin-left: 7px;
 
+  }
+  .icon-menu{
+    display: none;
+  }
+  .nav-menu{
+    background-color: #8D8F8E;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    text-align: right;
+    position: absolute;
+    top: 6px;
+    right: 25px;
+  }
+  .main-nav{
+    height: 60px;
+  }
+  .main-nav ul li{
+    display: inline-block;
+    border: none;
+    margin: 5px;
+  }
+
+  .template{
+    min-height: 500px;
+  }
+  .template img{
+    width: 40%;
+    float: left;
+    max-width: 290px;
+  }
 }
 
 @media only screen and (min-width: 940px){
-
+  .filter{
+    height: 70px;
+  }
 }

@@ -6,17 +6,30 @@
   interestsView.handleMainNav = function(){
     $('.main-nav').on('click','li',function(){
       var $clicked = $(this).data('content');
-      $('.tab-content').hide();
-      $('#' + $clicked).fadeIn();
-      $('#nav-menu').toggleClass('nav-menu-tgl');
+      console.log($clicked);
+      if($clicked !== 'github'){
+        if($clicked === 'about'){
+          $('#home').hide();
+        }
+        if($clicked === 'interests'){
+          $('#home').show();
+        }
+        $('.tab-content').hide();
+        $('#' + $clicked).fadeIn();
+        $('#nav-menu').toggleClass('nav-menu-tgl');
+      }else{
+        $('.tab-content').hide();
+        $('#' + $clicked).fadeIn();
+        console.log('made it');
+        $('.main-nav .tab:first').click();
+      }
     });
     $('.main-nav .tab:first').click();
     $('#nav-menu').toggleClass('nav-menu-tgl');
-    
   };
 
   interestsView.setTeaser = function(){
-    $('.article-body p:nth-child(2)').hide();
+    $('.article-body p:nth-child(n+3)').hide();
 
     $('#interests').on('click','.read-on',function(e){
       e.preventDefault();
@@ -28,7 +41,7 @@
 
     $('#interests').on('click','.read-less', function(e){
       e.preventDefault();
-      $(this).parent().find('.article-body p:nth-child(2)').slideUp();
+      $(this).parent().find('.article-body p:nth-child(n+3)').slideUp();
       $(this).attr('class','read-on read article-text');
 
       $(this).html('Read More &rarr;');
