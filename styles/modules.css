@@ -10,15 +10,16 @@
   float: left;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: bold;
   line-height: 1.5;
   border: 3px solid #ffffff;
   margin: 7px;
 
 }
+
 .main-nav{
-  background-color: #8D8F8E;
+  background-color: rgba(0, 0, 0, 0.5);
   height:50px;
   position: fixed;
   z-index: 99999;
@@ -31,6 +32,7 @@
   text-align: left;
   border-top: 2px solid #666666;
   border-bottom: 2px solid #404040;
+  background-color: transparent;
 }
 span{
   padding:0 10px 0  5px;
@@ -40,7 +42,7 @@ span{
   float: right;
   font-size: 2em;
   padding: 0;
-  margin: 5px 10px 0 0;
+  margin: 10px 10px 0 0;
 }
 .nav-menu{
   background-color: #4d4d4d;
@@ -50,6 +52,7 @@ span{
   float: right;
   transition: .5s;
 }
+
 .nav-menu-tgl{
   width: 50%;
   overflow: hidden;
@@ -64,25 +67,31 @@ span{
   height: auto;
 }
 .home-div{
-  width: 88%;
+  width: 87%;
   margin: 5% 5% 0 5%;
-  height: auto;
+  background-image: url('/images/me-bw.jpg');
+  background-size: cover;
+  height: 150px;
+  text-align: right;
+  padding-right: 3%;
 }
 .home-div h1{
-  color: #ffffff;
-  text-align: center;
+  color: #000000;
+  font-size: 1.6em;
+  padding: 60px 0px 0px 0px;
+
 }
 .home-div h3{
   color: #8D8F8E;
-  text-align: center;
-  padding: 2%;
+  font-size: 1.5em;
+  line-height: .5;
 }
 .filter{
   width: 90%;
   margin: 5% 0 0 5%;
   height: 40px;
   padding: 1%;
-  border: 1px solid #a6a6a6;
+  border: none;
   font-size: 1em;
   outline: none;
   background-color: #ffffff;
@@ -107,11 +116,14 @@ span{
 }
 
 .site-footer{
-  background-color: #4d4d4d;
+  height: 40px;
   text-align: center;
+  color: white;
 }
 .site-footer a{
-  padding: 10px;
+  padding: 5px 10px;
+  background-color: red;
+  margin-bottom: 10px;
 }
 .template{
   min-height: 375px;
@@ -119,7 +131,7 @@ span{
 .template h2{
   border-bottom: 1px solid #8D8F8E;
 }
-.template
+
 
 
 
@@ -134,6 +146,17 @@ span{
   }
   .nav-menu-tgl{
     width: 40%;
+  }
+  .home-div{
+    height: 200px;
+  }
+  .home-div h1{
+    font-size: 2.3em;
+    padding-top: 75px;
+
+  }
+  .home-div h3{
+    font-size: 1.8em;
   }
 }
 
@@ -153,14 +176,15 @@ span{
     display: none;
   }
   .nav-menu{
-    background-color: #8D8F8E;
+    background-color: transparent;
     width: auto;
     height: auto;
     overflow: hidden;
     text-align: right;
     position: absolute;
-    top: 6px;
+    top: 8px;
     right: 25px;
+
   }
   .main-nav{
     height: 60px;
@@ -169,20 +193,44 @@ span{
     display: inline-block;
     border: none;
     margin: 5px;
+
   }
 
   .template{
-    min-height: 500px;
+    min-height: 475px;
   }
   .template img{
     width: 40%;
-    float: left;
+    float: right;;
     max-width: 290px;
+  }
+  .home-div{
+    height: 250px;
+  }
+  .home-div h1{
+    font-size: 3em;
+    padding-top: 75px;
+
+  }
+  .home-div h3{
+    font-size: 2em;
   }
 }
 
-@media only screen and (min-width: 940px){
+@media only screen and (min-width: 900px){
   .filter{
     height: 70px;
+    font-size: 1.5em;
+  }
+  .home-div{
+    height: 300px;
+  }
+  .home-div h1{
+    font-size: 4em;
+    padding-top: 75px;
+
+  }
+  .home-div h3{
+    font-size: 3em;
   }
 }

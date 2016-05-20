@@ -10,6 +10,7 @@
       if($clicked !== 'github'){
         if($clicked === 'about'){
           $('#home').hide();
+          $('#footer').hide();
         }
         if($clicked === 'interests'){
           $('#home').show();
