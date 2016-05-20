@@ -68,7 +68,7 @@ span{
 }
 .home-div{
   width: 87%;
-  margin: 5% 5% 0 5%;
+  margin: 1% 5% 0px 5%;
   background-image: url('/images/me-bw.jpg');
   background-size: cover;
   height: 150px;
@@ -88,7 +88,7 @@ span{
 }
 .filter{
   width: 90%;
-  margin: 5% 0 0 5%;
+  margin: 2% 0 0 5%;
   height: 40px;
   padding: 1%;
   border: none;
