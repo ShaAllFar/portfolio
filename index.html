@@ -8,7 +8,7 @@
   <link href="styles/modules.css" type="text/css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://i.icomoon.io/public/temp/7de1d0785c/portfolio/style.css">  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/49966963af/portfolio/style.css">
   <script id="article-template" type="text/x-handlebars-template">
     <article class="template" data-content="interests" data-category="{{category}}">
       <header>
@@ -32,8 +32,8 @@
       <span class="icon-menu"></span>
       <div id="nav-menu"class="nav-menu clearfix">
         <ul>
-          <li class="tab" data-content="interests"><a href="#top"><span class="icon-home"></span>Home</a></li>
-          <li class="tab" data-content="about"><a href="#about"><span class="icon-user-tie"></span>About</a></li>
+          <li class="tab" data-content="interests"><a href="/"><span class="icon-home"></span>Home</a></li>
+          <li class="tab" data-content="about"><a href="/about"><span class="icon-user-tie"></span>About</a></li>
           <li data-content="github"><a href="http://www.github.com" target="_blank"><span class="icon-github"></span>GitHub</a></li>
           <li data-content="linkedin"><a href-"http://www.linkedIn.com" target="_blank"><span class="icon-linkedin"></span>LinkedIn</a></li>
         </ul>
@@ -71,9 +71,12 @@
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-  <script src="scripts/interests.js"></script>
-  <script src="scripts/interestsView.js"></script>
-  <script>Interest.fetchAll(interestsView.initIndexPage);</script>
+  <script src="scripts/vendor/page.js"></script>
+  <script src="scripts/models/interests.js"></script>
+  <script src="scripts/views/interestsView.js"></script>
+  <script src="scripts/controllers/aboutController.js"></script>
+  <script src="scripts/controllers/articleController.js"></script>
+  <script src="scripts/controllers/routes.js"></script>
 
 </body>
 </html>
