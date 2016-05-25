@@ -5,8 +5,8 @@
 
   articleController.index = function(){
 
+    $('.tab-content').hide();
     $('#interests').show();
-    $('#about').hide();
   };
 
   module.articleController = articleController;

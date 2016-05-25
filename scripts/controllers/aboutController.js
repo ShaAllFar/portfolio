@@ -2,7 +2,7 @@
   var aboutController = {};
 
   aboutController.index = function(){
-    $('#interests').hide();
+    $('.tab-content').hide();
     $('#about').show();
   };
 

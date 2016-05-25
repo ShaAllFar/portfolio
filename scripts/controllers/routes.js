@@ -1,10 +1,4 @@
-page('/', Index);
-page('/about', About);
+page('/', articleController.index);
+page('/about', aboutController.index);
+page('/github', gitController.index);
 page();
-
-function Index(){
-  articleController.index();
-}
-function About(){
-  aboutController.index();
-}
