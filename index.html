@@ -8,7 +8,7 @@
   <link href="styles/modules.css" type="text/css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/49966963af/portfolio/style.css">
+  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/cecbbe969f/portfolio/style.css">
   <script id="article-template" type="text/x-handlebars-template">
     <article class="template" data-content="interests" data-category="{{category}}">
       <header>
@@ -20,6 +20,17 @@
       <a class="read-on article-text read">Read On &rarr;</a>
     </article>
   </script>
+  <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <p>Description: {{description}}</p>
+        <p>Language: {{language}}</p>
+        <p>Last updated: {{pushed_at}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
   <script id="category-filter-template" type="text/x-handlebars-template">
     <option value="{{category}}">{{category}}</option>
   </script>
@@ -34,7 +45,7 @@
         <ul>
           <li class="tab" data-content="interests"><a href="/"><span class="icon-home"></span>Home</a></li>
           <li class="tab" data-content="about"><a href="/about"><span class="icon-user-tie"></span>About</a></li>
-          <li data-content="github"><a href="http://www.github.com" target="_blank"><span class="icon-github"></span>GitHub</a></li>
+          <li class="tab" data-content="github"><a href="/github"><span class="icon-github"></span>GitHub</a></li>
           <li data-content="linkedin"><a href-"http://www.linkedIn.com" target="_blank"><span class="icon-linkedin"></span>LinkedIn</a></li>
         </ul>
       </div>
@@ -57,6 +68,11 @@
       </select>
 
     </section>
+    <section id="github" class="tab-content">
+      <ul>
+        <li>repo content</li>
+      </ul>
+    </section>
     <section id="about" class="tab-content">
       <header>
         <h2>Thank You</h2>
@@ -72,10 +88,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   <script src="scripts/vendor/page.js"></script>
+  <script src="token.js"></script>
   <script src="scripts/models/interests.js"></script>
+  <script src="scripts/models/repos.js"></script>
   <script src="scripts/views/interestsView.js"></script>
+  <script src="scripts/views/repoView.js"></script>
   <script src="scripts/controllers/aboutController.js"></script>
   <script src="scripts/controllers/articleController.js"></script>
+  <script src="scripts/controllers/gitController.js"></script>
   <script src="scripts/controllers/routes.js"></script>
 
 </body>
