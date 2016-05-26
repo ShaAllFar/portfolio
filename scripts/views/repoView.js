@@ -13,7 +13,6 @@
     $('#github ul').append(
       repos.with('name')
       .map(render));
-    console.log('hrtr');
   };
 
   module.reposView = reposView;

@@ -9,12 +9,12 @@
 
   Interest.all = [];
 
-  Interest.prototype.toHtml = function(templateID){
-    var template = Handlebars.compile($(templateID).html());
-    this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
-    return template(this);
-
-  };
+  // Interest.prototype.toHtml = function(templateID){
+  //   var template = Handlebars.compile($(templateID).html());
+  //   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  //   return template(this);
+  //
+  // };
 
   Interest.loadAll = function(dataPassedIn){
     dataPassedIn.sort(function(a,b){
