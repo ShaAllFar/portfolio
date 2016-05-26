@@ -50,7 +50,7 @@
     });
   };
   interestsView.initIndexPage = function(){
-      $('#interests').empty().show().siblings().hide();
+    $('#interests').empty().show().siblings().hide();
     Interest.all.forEach(function(a){
       if($('#category-filter option:contains("' + a.category + '")').length === 0){
         $('#category-filter').append(render(a,'#category-filter-template'));
