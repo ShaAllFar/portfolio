@@ -6,7 +6,7 @@
   var render = function(article, templateID){
     var template = Handlebars.compile($(templateID).html());
     article.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
-    return template(this);
+    return template(article);
   };
 
   interestsView.setTeaser = function(){
