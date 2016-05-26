@@ -3,7 +3,12 @@
 
   var interestsView = {};
 
-  
+  var render = function(article, templateID){
+    var template = Handlebars.compile($(templateID).html());
+    article.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+    return template(this);
+  };
+
   interestsView.setTeaser = function(){
     $('.article-body p:nth-child(n+3)').hide();
 
@@ -45,11 +50,12 @@
     });
   };
   interestsView.initIndexPage = function(){
-    Interest.all.map(function(a){
+      $('#interests').empty().show().siblings().hide();
+    Interest.all.forEach(function(a){
       if($('#category-filter option:contains("' + a.category + '")').length === 0){
-        $('#category-filter').append(a.toHtml('#category-filter-template'));
+        $('#category-filter').append(render(a,'#category-filter-template'));
       }
-      $('#interests').append(a.toHtml('#article-template'));
+      $('#interests').append(render(a,'#article-template'));
     });
     interestsView.handleFilter();
     interestsView.setTeaser();
