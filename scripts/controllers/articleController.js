@@ -6,7 +6,10 @@
   articleController.index = function(){
 
     $('.tab-content').hide();
+    $('#home').show();
     $('#interests').show();
+    $('footer a').show();
+
   };
 
   module.articleController = articleController;

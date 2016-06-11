@@ -2,6 +2,8 @@
   var gitController = {};
   gitController.index = function(){
     $('.tab-content').hide();
+    $('#home').hide();
+    $('footer a').hide();
     $('#github').show();
     repos.requestRepos(reposView.index);
   };

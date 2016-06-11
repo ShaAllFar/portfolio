@@ -8,7 +8,7 @@
   <link href="styles/modules.css" type="text/css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/cecbbe969f/portfolio/style.css">
+  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/567598d5ab/portfolio/style.css">
   <script id="article-template" type="text/x-handlebars-template">
     <article class="template" data-content="interests" data-category="{{category}}">
       <header>
@@ -44,14 +44,15 @@
       <div id="nav-menu"class="nav-menu clearfix">
         <ul>
           <li class="tab" data-content="interests"><a href="/"><span class="icon-home"></span>Home</a></li>
-          <li class="tab" data-content="about"><a href="/about"><span class="icon-user-tie"></span>About</a></li>
           <li class="tab" data-content="github"><a href="/github"><span class="icon-github"></span>GitHub</a></li>
-          <li data-content="linkedin"><a href-"http://www.linkedIn.com" target="_blank"><span class="icon-linkedin"></span>LinkedIn</a></li>
+          <li class="tab" data-content="about"><a href="/about"><span class="icon-user-tie"></span>About</a></li>
+          <li data-content="linkedin"><a href="https://www.linkedin.com/in/shawn-farrow-47052b92" target="_blank"><span class="icon-linkedin"></span>LinkedIn</a></li>
         </ul>
       </div>
     </nav>
   </header>
   <main>
+    <div id="site-wrapper" class="wrapper">
     <section id="top" class="home-section clearfix">
       <!--home section -->
       <div class="spacer"></div>
@@ -68,19 +69,24 @@
       </select>
 
     </section>
-    <section id="github" class="tab-content">
-      <ul>
-        <li>repo content</li>
-      </ul>
+    <section id="about" class="tab-content about">
+      <h2>About</h2>
+      <article class="about-section">
+        <header>
+          <h3>Thank You</h3>
+        </header>
+        <section>
+          <p>Thank you for taking the time to view my website.</p>
+        </section>
+      </article>
     </section>
-    <section id="about" class="tab-content">
-      <header>
-        <h2>Thank You</h2>
-      </header>
-      <section>
-        <p>Thank you for taking the time to view my website.</p>
-      </section>
+    <section id="github" class="tab-content repo-template">
+      <h2>GitHub Repos</h2>
+        <ul>
+          <li>repo content</li>
+        </ul>
     </section>
+  </div>
   </main>
   <footer id="footer"class="site-footer">
     <a href="#top">Top</a>
@@ -88,7 +94,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   <script src="scripts/vendor/page.js"></script>
-  <script src="token.js"></script>
+  <!-- <script src="token.js"></script> -->
   <script src="scripts/models/interests.js"></script>
   <script src="scripts/models/repos.js"></script>
   <script src="scripts/views/interestsView.js"></script>

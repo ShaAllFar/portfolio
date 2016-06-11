@@ -2,7 +2,7 @@
   var repos = {};
   repos.all = [];
   repos.requestRepos = function(callback){
-    $.get('users/shaallfar/repos' +
+    $.get('https://api.github.com/users/shaallfar/repos' +
     '?per_page=15' +
     '&sort=updated')
     .done(function(data){

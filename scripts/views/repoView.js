@@ -4,7 +4,7 @@
   var ui = function(){
     var $git = $('#github');
     $git.find('ul').empty();
-    // $git.show().siblings.hide();
+    $git.show();
   };
   var render = Handlebars.compile($('#repo-template').html());
 
