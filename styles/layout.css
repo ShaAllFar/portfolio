@@ -1,6 +1,11 @@
 .clearfix{
   clear: both;
 }
+.wrapper{
+  max-width: 960px;
+  min-width: 350px;
+  margin: 0 auto;
+}
 .template{
   padding: 3% 0;
   background-color: #ffffff;

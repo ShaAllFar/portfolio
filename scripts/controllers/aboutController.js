@@ -3,6 +3,8 @@
 
   aboutController.index = function(){
     $('.tab-content').hide();
+    $('#home').hide();
+    $('footer a').hide();
     $('#about').show();
   };
 
