@@ -5,7 +5,8 @@
 
   var render = function(article, templateID){
     var template = Handlebars.compile($(templateID).html());
-    article.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+    article.daysAgo = parseInt((new Date() - new Date(article.publishedOn))/60/60/24/1000);
+    console.log(article.daysAgo);
     return template(article);
   };
 
@@ -47,6 +48,9 @@
     $('.icon-menu').on('click',function(){
       $('#nav-menu').toggleClass('nav-menu-tgl');
 
+    });
+    $('#nav-menu ul li').on('click',function(){
+      $('#nav-menu').toggleClass('nav-menu-tgl');
     });
   };
   interestsView.initIndexPage = function(){
